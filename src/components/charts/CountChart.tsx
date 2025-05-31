@@ -6,7 +6,8 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import PercentageCard from "./ui/PercentageCard";
+import PercentageCard from "../ui/PercentageCard";
+
 const data = [
   {
     name: "Total Students",

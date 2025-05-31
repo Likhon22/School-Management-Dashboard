@@ -1,8 +1,20 @@
-import AttendanceChart from "@/components/AttendanceChart";
-import CountChart from "@/components/CountChart";
-import StatCard from "@/components/ui/StatCard";
+"use client";
+import AttendanceChart from "@/components/charts/AttendanceChart";
+
+import EventCalendar from "@/components/EventCalendar";
+import FinanceChart from "@/components/charts/FinanceChart";
+import StatCard from "@/components/cards/StatCard";
+import { Value } from "@/types/eventCalendar";
+import { useState } from "react";
+import CountChart from "@/components/charts/CountChart";
+import EventsCard from "@/components/cards/EventsCard";
+import Announcement from "@/components/Announcement";
 
 const AdminPage = () => {
+  const [value, setValue] = useState<Value>(new Date());
+  console.log("Admin Page Rendered");
+  console.log(value);
+
   return (
     <div
       className="
@@ -29,10 +41,16 @@ const AdminPage = () => {
           </div>
         </div>
         {/* bottom chart */}
-        <div></div>
+        <div className="w-full h-[500px]">
+          <FinanceChart />
+        </div>
       </div>
       {/* right */}
-      <div className="w-full lg:w-1/3">r</div>
+      <div className="w-full lg:w-1/3 flex flex-col gap-8">
+        <EventCalendar value={value} onChange={setValue} />
+        <EventsCard eventTitle="Events" />
+        <Announcement />
+      </div>
     </div>
   );
 };

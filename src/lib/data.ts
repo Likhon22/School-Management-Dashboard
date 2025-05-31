@@ -1,6 +1,8 @@
 // TEMPORARY DATA
 
-export let role = "admin";
+import { User_Role } from "@/constant/role";
+
+export let role = User_Role.student;
 
 export const teachersData = [
   {
@@ -914,7 +916,6 @@ export const announcementsData = [
     date: "2025-01-01",
   },
 ];
-
 
 // YOU SHOULD CHANGE THE DATES OF THE EVENTS TO THE CURRENT DATE TO SEE THE EVENTS ON THE CALENDAR
 export const calendarEvents = [
