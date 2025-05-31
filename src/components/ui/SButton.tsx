@@ -12,7 +12,7 @@ const SButton = ({ className, text, ...props }: SButtonProps) => {
     <button
       {...props}
       className={clsx(
-        "bg-gray-600 text-white py-2 px-4 rounded-md cursor-pointer",
+        "bg-gray-600 text-white py-2 px-4 rounded-md cursor-pointer hover:bg-gray-700 transition-all duration-300 hover:scale-105 ease-in-out",
         className
       )}
     >

@@ -12,8 +12,6 @@ import Announcement from "@/components/Announcement";
 
 const AdminPage = () => {
   const [value, setValue] = useState<Value>(new Date());
-  console.log("Admin Page Rendered");
-  console.log(value);
 
   return (
     <div

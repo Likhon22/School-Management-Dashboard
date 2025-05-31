@@ -129,7 +129,7 @@ const Menu = () => {
             if (i.visible.includes(role)) {
               return (
                 <Link href={i.href} key={i.label}>
-                  <div className="flex items-center gap-2 mt-2  hover:bg-gray-200">
+                  <div className="flex items-center gap-2 mt-2  hover:bg-lSky hover:text-white p-2">
                     <Image src={i.icon} alt={i.label} width={20} height={20} />
                     <span className="hidden lg:block">{i.label}</span>
                   </div>
