@@ -23,7 +23,7 @@ const Pagination = ({ total, page, setPage }: PaginationProps) => {
     <div className="flex gap-12 items-center justify-center mt-6">
       <SButton
         disabled={page === 1}
-        className={` bg-white text-sm text-black font-light hover:bg-lPurple hover:text-white `}
+        className={` bg-white text-sm text-black  hover:bg-lPurple hover:text-white `}
         text="prev"
         onClick={() => handlePrev()}
       />
@@ -38,15 +38,15 @@ const Pagination = ({ total, page, setPage }: PaginationProps) => {
               text={`${currentPage}`}
               className={`${
                 currentPage === page
-                  ? "bg-lSky"
-                  : " bg-white text-sm text-black font-light"
+                  ? "bg-lSky text-white"
+                  : " bg-white text-sm text-black "
               } hover:bg-lPurple hover:text-white`}
             />
           );
         })}
       </div>
       <SButton
-        className={` bg-white text-sm text-black font-light hover:bg-lPurple hover:text-white `}
+        className={` bg-white text-sm text-black  hover:bg-lPurple hover:text-white `}
         onClick={() => handleNext()}
         text="next"
         disabled={total === page}

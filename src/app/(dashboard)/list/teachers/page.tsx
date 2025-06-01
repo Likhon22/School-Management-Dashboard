@@ -91,7 +91,7 @@ const TeacherList = () => {
   );
 
   return (
-    <div className="mt-6 h-full">
+    <div className="py-6 h-full flex flex-col ">
       {/* Top */}
       <div className="flex justify-between">
         <h1 className="hidden md:block text-lg font-semibold">All Teachers</h1>
@@ -117,7 +117,9 @@ const TeacherList = () => {
       </div>
 
       {/* Table */}
-      <Table renderRow={renderRow} data={teachersData} columns={columns} />
+      <div className="flex-1">
+        <Table renderRow={renderRow} data={teachersData} columns={columns} />
+      </div>
       {/* pagination */}
       <Pagination page={page} setPage={setPage} total={10} />
     </div>

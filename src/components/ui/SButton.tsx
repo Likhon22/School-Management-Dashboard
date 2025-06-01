@@ -18,7 +18,7 @@ const SButton = ({
       {...props}
       disabled={disabled}
       className={clsx(
-        "bg-gray-600 text-white py-2 px-4 rounded-md transition-all duration-300 ease-in-out",
+        "bg-gray-600 py-2 px-4 rounded-md transition-all duration-300 ease-in-out",
         {
           "cursor-pointer hover:bg-gray-700 hover:scale-105": !disabled,
           "opacity-30 cursor-not-allowed pointer-events-none grayscale":

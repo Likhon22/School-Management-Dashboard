@@ -21,7 +21,7 @@ export default function RootLayout({
       {/* right side */}
       <div className="w-[86%] md:w-[92%] lg:w-[84%] bg-[#F7F8FA] overflow-scroll p-6 flex flex-col">
         <Navbar />
-        {children}
+        <div className="flex-1">{children}</div>
       </div>
     </div>
   );
