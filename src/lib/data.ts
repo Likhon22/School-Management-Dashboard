@@ -2,7 +2,7 @@
 
 import { User_Role } from "@/constant/role";
 
-export let role = User_Role.student;
+export let role = User_Role.admin;
 
 export const teachersData = [
   {

@@ -7,12 +7,23 @@ type SButtonProps = {
   className?: string;
   text: string;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
-const SButton = ({ className, text, ...props }: SButtonProps) => {
+const SButton = ({
+  className,
+  text,
+  disabled = false,
+  ...props
+}: SButtonProps) => {
   return (
     <button
       {...props}
+      disabled={disabled}
       className={clsx(
-        "bg-gray-600 text-white py-2 px-4 rounded-md cursor-pointer hover:bg-gray-700 transition-all duration-300 hover:scale-105 ease-in-out",
+        "bg-gray-600 text-white py-2 px-4 rounded-md transition-all duration-300 ease-in-out",
+        {
+          "cursor-pointer hover:bg-gray-700 hover:scale-105": !disabled,
+          "opacity-30 cursor-not-allowed pointer-events-none grayscale":
+            disabled,
+        },
         className
       )}
     >
