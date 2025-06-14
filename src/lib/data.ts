@@ -1,5 +1,6 @@
 // TEMPORARY DATA
 
+import { Result } from "@/app/(dashboard)/list/results/page";
 import { User_Role } from "@/constant/role";
 
 export let role = User_Role.admin;
@@ -668,7 +669,7 @@ export const assignmentsData = [
   },
 ];
 
-export const resultsData = [
+export const resultsData: Result[] = [
   {
     id: 1,
     subject: "Math",
